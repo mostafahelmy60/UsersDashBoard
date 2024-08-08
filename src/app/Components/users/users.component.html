@@ -1,0 +1,85 @@
+  <div class="container">
+    <div class="text-center">
+        <!-- items being paged -->
+         @if(dataSource){
+        <table mat-table [dataSource]="dataSource">
+            @for (col of displayedColumns; track col) {
+                <ng-container matColumnDef="{{col}}">
+                    <th class="fontHeader" mat-header-cell *matHeaderCellDef> {{col}} </th>
+                    @if (col != 'avatar') {
+                        <td mat-cell *matCellDef="let element"> {{element[col]}} </td>
+                    }@else {
+                        <td mat-cell *matCellDef="let element"> <img src="{{element[col]}}"/> </td>
+                    }
+                    </ng-container>
+            }
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr appRows
+                mat-row 
+                *matRowDef="let row; columns: displayedColumns;"
+                [routerLink]="['/users',row.id]"
+            ></tr> 
+               
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[per_Page/3, per_Page/2, per_Page, per_Page*2]" aria-label="Select page">
+        </mat-paginator>
+    }@else {
+        <mat-spinner diameter="100%"></mat-spinner>
+    }
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <table mat-table [dataSource]="dataSource">
+    <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+            <mat-card-title-group matColumnDef="id">
+                    <mat-card-title hidden mat-header-cell *matHeaderCellDef>id</mat-card-title>
+                    <mat-card-subtitle mat-cell *matCellDef="let element">{{element.id}}</mat-card-subtitle>
+                </mat-card-title-group>
+        </mat-card-header>
+        </mat-card>
+        <mat-card class="example-card" appearance="outlined">
+            <mat-card-header>
+                <mat-card-title-group matColumnDef="first_name">
+                    <mat-card-title hidden mat-header-cell *matHeaderCellDef>first_name</mat-card-title>
+                    <mat-card-subtitle mat-cell *matCellDef="let element">{{element.first_name}}</mat-card-subtitle>
+                </mat-card-title-group>
+            </mat-card-header>
+        </mat-card>
+        <mat-card class="example-card" appearance="outlined">
+            <mat-card-header>
+                <mat-card-title-group matColumnDef="last_name">
+                    <mat-card-title hidden mat-header-cell *matHeaderCellDef>last_name</mat-card-title>
+                    <mat-card-subtitle mat-cell *matCellDef="let element">{{element.last_name}}</mat-card-subtitle>
+                </mat-card-title-group>
+            </mat-card-header>
+        </mat-card>
+        <mat-card class="example-card" appearance="outlined">
+            <mat-card-header>
+                <mat-card-title-group matColumnDef="avatar">
+                    <mat-card-title hidden mat-header-cell *matHeaderCellDef>avatar</mat-card-title>
+                    <mat-card-subtitle mat-cell *matCellDef="let element"><img src="{{element.avatar}}"/></mat-card-subtitle>
+                </mat-card-title-group>
+            </mat-card-header>
+        </mat-card>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>    
+    <mat-paginator [pageSizeOptions]="[per_Page/3, per_Page/2, per_Page, per_Page*2]" aria-label="Select page">
+    </mat-paginator> -->
+
+
+<!-- Cards with media area -->
+
+  

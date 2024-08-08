@@ -1,0 +1,16 @@
+  <mat-toolbar>
+    <!-- <mat-icon><i class="material-icons">group_remove</i></mat-icon> -->
+    <i class="material-icons usersIcon">groups</i>
+
+    <span class="users"><a routerLink="/" class="btn btn-outline-dark">Home</a></span>
+    <span class="users"><a (click)="clearInputSearch(inp)" routerLink="/users" class="btn btn-outline-dark">Users</a></span>
+
+    <span class="example-spacer"></span>
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width height">
+          <mat-label>Search By Student ID</mat-label>
+          <input #inp (input)="getID($event)" type="number" matInput placeholder="Ex. 1">
+        </mat-form-field>
+    </form>
+  </mat-toolbar>

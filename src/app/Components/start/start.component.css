@@ -1,0 +1,39 @@
+div {
+    background-image: url("/Images/back.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    width: 100%;
+    overflow-y: auto;
+    z-index: 2;
+   }
+
+
+.user{
+    /* width: 50px; */
+    font-size: 200px;
+    color: rgb(33, 33, 144);
+    padding: 0px;
+    margin: 0px;
+}
+
+.bbb:hover{
+    transform: scale(1.1);
+    background-color: rgba(226, 226, 242, 0.147);
+}
+
+.fontUser{
+    /* padding: 0px;
+    margin: 0px; */
+    font-size: 40px;
+    color: lightgray;
+}
+
+.bbb{
+    border: 3px solid rgb(33, 33, 144);
+    border-radius: 50%;
+    height: 280px;
+    width: 280px;
+    background-color: rgba(72, 104, 230, 0.2);
+}

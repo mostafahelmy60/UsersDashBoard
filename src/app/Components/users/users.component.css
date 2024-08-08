@@ -1,0 +1,22 @@
+table, td, th{
+    text-align: center !important;
+}
+img{
+    border-radius: 50%;
+    width: 30%;
+    min-width: 50px;
+    min-height: 50px;
+    max-height: 120px;
+    margin: 2px auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.fontHeader{
+    font-size: 13pt;
+}
+
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }

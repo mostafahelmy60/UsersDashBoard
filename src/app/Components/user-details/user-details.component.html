@@ -1,0 +1,36 @@
+<div class="text-center m-auto all">
+@if(ID != 0){
+    @if (ID <= 6 && ID>0) {
+        @if (User.first_name) {
+            <mat-card appCard class="example-card" appearance="outlined">
+                <a class="btn topicon" routerLink="/users">
+                    <i class="material-icons">arrow_back</i>
+                </a>
+                <mat-card-header class="example-card-header headerr">
+                    <mat-card-subtitle>{{User.first_name}} {{User.last_name}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image [src]="User.avatar" alt="Photo">
+                <mat-card-footer class="example-card-footer">
+                    <mat-chip-set class="buttonsChips" aria-label="Rating">
+                        <mat-chip><a class="btn" href="mailto:{{User.email}}"><span>Contact Me</span></a></mat-chip>
+                        <mat-chip><span>{{User.email}}</span></mat-chip>
+                    </mat-chip-set>
+
+                </mat-card-footer>
+            </mat-card>
+        }@else {
+            <mat-spinner></mat-spinner>
+        }
+    }@else {
+    <mat-card appCard class="example-card" appearance="outlined">
+        <a class="btn topicon" routerLink="/users">
+            <i class="material-icons">arrow_back</i>
+        </a>
+        <img class="imgNotFound" mat-card-image src="Images/no-users-found.png" alt="Photo">
+    </mat-card>
+    }
+
+}@else {   
+        <mat-spinner></mat-spinner>
+    }
+</div>

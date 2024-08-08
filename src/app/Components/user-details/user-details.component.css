@@ -1,0 +1,46 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .all{
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .headerr{
+    display: inline !important;
+    flex-direction: column;
+  }
+  .img{
+    width: 50px;
+    border-radius: 30px;
+  }
+
+  /* i[class='material-icons']:hover{
+    font-size: xx-large;
+  } */
+
+  .topicon{
+    text-align: left;
+    width: 30px;
+    padding-left: 5px;
+    height: 30px;
+  }
+
+
+  .topicon:active{
+    border: none;
+  }
+
+  .topicon:hover{
+    color: darkslategray;
+  }
+
+  .imgNotFound{
+    width: 300px;
+  }
+
+  .buttonsChips{
+    padding: 5px;
+  }
